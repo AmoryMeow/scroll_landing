@@ -5,6 +5,10 @@ dist/
 
 node_modules/
 
+# Temporary OS files
+.DS_Store
+Thumbs.db
+
 # Editor configuration
 .vscode/
 .idea/
