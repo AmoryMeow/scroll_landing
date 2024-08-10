@@ -1,0 +1,13 @@
+{
+  "plugins": {
+    "postcss-nested": {},
+    "postcss-simple-vars": {},
+    "postcss-preset-env": {
+      "stage": 1
+    },
+    "autoprefixer": {},
+    "cssnano": {
+      "preset": "default"
+    }
+  }
+}
