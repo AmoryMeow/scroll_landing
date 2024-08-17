@@ -19,6 +19,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $bg-color;
@@ -272,5 +273,118 @@ body {
       border-radius: 100%;
       animation: trackBallSlide $animDuration linear infinite;
     }
+  }
+}
+
+.scroll {
+  min-height: 100vh;
+  color: $color;
+  margin-bottom: 100vh;
+}
+
+.background {
+  padding: 2em;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30em;
+    min-height: 100vh;
+    object-fit: cover;
+    transition: opacity 1600ms;
+    opacity: 0;
+  }
+}
+
+.block {
+  position: relative;
+  height: 30em;
+  min-height: 100vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 2em;
+
+  .title {
+    font-size: 3em;
+  }
+
+  .text {
+    max-width: 400px;
+    line-height: 2em;
+    margin-top: 1em;
+    font-size: 1.1em;
+  }
+}
+
+.block_center {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.block_right {
+  justify-content: flex-end;
+  width: 80%;
+}
+
+.block_left {
+  justify-content: flex-start;
+  float: right;
+  width: 80%;
+}
+
+.panel {
+  width: 90%;
+  max-width: 25em;
+  padding: 2.5em;
+  background: rgba(170, 170, 170, 0.27);
+  box-shadow: 0 8px 32px 0 rgba(40, 40, 40, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+
+  .title {
+    font-size: 2em;
+  }
+
+  .text {
+    line-height: 2em;
+    margin-top: 1em;
+    font-size: 1.1em;
+  }
+}
+
+.about {
+  color: $color;
+  padding: 2.5em;
+  height: 100vh;
+
+  .title {
+    font-size: 3em;
+  }
+
+  .text {
+    line-height: 2em;
+    font-size: 1.1em;
+    margin: 2em 0;
+  }
+}
+
+.image_active {
+  z-index: 2 !important;
+  opacity: 1 !important;
+}
+
+@media screen and (max-height: 450px) {
+  .scroll {
+    margin-bottom: 30em;
   }
 }
