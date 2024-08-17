@@ -1,0 +1,1 @@
+!function(){let e=document.querySelectorAll(".image"),c=new IntersectionObserver(c=>{c.forEach(c=>{c.isIntersecting&&e.forEach(e=>{e.classList.remove("image_active"),e.id.replace("image","")===c.target.id.replace("block","")&&e.classList.add("image_active")})})},{threshold:.6});document.querySelectorAll(".block").forEach(e=>{c.observe(e)})}();
